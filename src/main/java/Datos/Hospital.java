@@ -15,14 +15,14 @@ public class Hospital {
 
 	public Hospital(){}
 
-	public Hospital(String nombre, int telefono, ArrayList medicos, ArrayList pacientes, ArrayList consultorios, ArrayList citas, Agenda agenda){
+	public Hospital(String nombre, int telefono, ArrayList<Medico> medicos, ArrayList<Paciente> pacientes, ArrayList<Consultorio> consultorios, ArrayList<Cita> citas, Agenda agenda){
 		this.setNombre(nombre);
 		this.setTelefono(telefono);
 		this.setListaMedicos(medicos);
 		this.setListaPacientes(pacientes);
 		this.setConsultorios(consultorios);
 		this.setCitas(citas);
-		this.agenda=agenda;
+        this.setAgenda(agenda);
 	}
 
 	public String getNombre() {
