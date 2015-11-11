@@ -12,10 +12,6 @@ public class Medico extends Persona {
 	}
 
 
-
-
-
-
 	public Medico() {}
 
 	public ArrayList<String> getEspecialidades() {
