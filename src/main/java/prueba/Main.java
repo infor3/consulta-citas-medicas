@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 import Datos.Hospital;
 import Datos.Medico;
-import Negocio.AdministracionHospital;
+import Negocio.AdmiHospital;
 
 public class Main {
 
 	public static void main(String[] args) {
 		Hospital hos=new Hospital();
-		AdministracionHospital ad=new AdministracionHospital();
+		AdmiHospital ad=new AdmiHospital();
 		ArrayList<String> prueba= new ArrayList<>();
 		ArrayList<String> prueba2= new ArrayList<>();
 		ArrayList<String> prueba3= new ArrayList<>();
