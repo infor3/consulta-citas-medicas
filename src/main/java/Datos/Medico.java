@@ -11,6 +11,7 @@ public class Medico extends Persona {
 		this.setEspecialidades(especialidades);
 	}
 
+
 	public Medico() {}
 
 	public ArrayList<String> getEspecialidades() {
