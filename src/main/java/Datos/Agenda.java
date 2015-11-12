@@ -1,5 +1,6 @@
 package Datos;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Agenda {
@@ -8,7 +9,15 @@ public class Agenda {
 	private Date fecha;
 	private Date inicio;
 	private Date fin;
-	private boolean disponibilidad;
+	private ArrayList<Cita> listaCitas=new ArrayList<>();
+
+	public Agenda(Date inicioAgenda, Date finAgenda, Date fecha, Date inicio, Date fin) {
+		this.inicioAgenda = inicioAgenda;
+		this.finAgenda = finAgenda;
+		this.fecha = fecha;
+		this.inicio = inicio;
+		this.fin = fin;
+	}
 
 	public Date getInicioAgenda() {
 		return inicioAgenda;
@@ -50,11 +59,11 @@ public class Agenda {
 		this.fin = fin;
 	}
 
-	public boolean isDisponibilidad() {
-		return disponibilidad;
+	public ArrayList<Cita> getListaCitas() {
+		return listaCitas;
 	}
 
-	public void setDisponibilidad(boolean disponibilidad) {
-		this.disponibilidad = disponibilidad;
+	public void setListaCitas(ArrayList<Cita> listaCitas) {
+		this.listaCitas = listaCitas;
 	}
 }

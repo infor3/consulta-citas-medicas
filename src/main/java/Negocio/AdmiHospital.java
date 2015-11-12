@@ -12,10 +12,10 @@ public class AdmiHospital {
 	public void modificarEspeRemove(Hospital hospital, Medico medico) {
 		ArrayList<Medico> medic=hospital.getListaMedicos();
 		ArrayList<String> especialidades=new ArrayList<>();
-		for (int i = 0; i < medic.size(); i++) {
-			if (!(medic.get(i).equals(medico))) {
-				for (int j = 0; j < medic.get(i).getEspecialidades().size(); j++) {
-					especialidades.add(medic.get(i).getEspecialidades().get(j));
+		for (Medico aMedic : medic) {
+			if (!(aMedic.equals(medico))) {
+				for (int j = 0; j < aMedic.getListaEspecialidades().size(); j++) {
+					especialidades.add(aMedic.getListaEspecialidades().get(j));
 				}
 			}
 		}
@@ -26,16 +26,15 @@ public class AdmiHospital {
 	}
 	public void modificarEspeAdd(Hospital hospital,ArrayList<String> nueva) {
 		ArrayList<String> compara=hospital.getListaEspecialidades();
-		for (int j = 0; j < nueva.size(); j++) {
-			for (int i = 0; i < compara.size(); i++) {
-				if (nueva.get(j).equals(compara.get(i))) {
+		for (int j = 0; j < nueva.size(); j++)
+			for (String aCompara : compara) {
+				if (nueva.get(j).equals(aCompara)) {
 					nueva.remove(j);
 				}
 			}
-		}
 		if (nueva.size()>0) {
-			for (int i = 0; i < nueva.size(); i++) {
-				compara.add(nueva.get(i));
+			for (String aNueva : nueva) {
+				compara.add(aNueva);
 			}
 			hospital.setListaEspecialidades(compara);
 		}

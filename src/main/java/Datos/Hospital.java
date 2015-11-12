@@ -5,24 +5,18 @@ import java.util.ArrayList;
 public class Hospital {
 	private String nombre;
 	private int telefono;
-
 	private ArrayList<String> listaEspecialidades=new ArrayList<>();
-	private ArrayList<Consultorio> consultorios=new ArrayList<>();
+	private ArrayList<Consultorio> listaConsultorios =new ArrayList<>();
 	private ArrayList<Medico> listaMedicos=new ArrayList<>();
-	private ArrayList<Cita> citas= new ArrayList<>();
+	private ArrayList<Cita> listaCitas= new ArrayList<>();
 	private ArrayList<Paciente> listaPacientes= new ArrayList<>();
-	private Agenda agenda;
+	private ArrayList<Agenda> agenda= new ArrayList<>();
 
 	public Hospital(){}
 
-	public Hospital(String nombre, int telefono, ArrayList<Medico> medicos, ArrayList<Paciente> pacientes, ArrayList<Consultorio> consultorios, ArrayList<Cita> citas, Agenda agenda){
-		this.setNombre(nombre);
-		this.setTelefono(telefono);
-		this.setListaMedicos(medicos);
-		this.setListaPacientes(pacientes);
-		this.setConsultorios(consultorios);
-		this.setCitas(citas);
-        this.setAgenda(agenda);
+	public Hospital(String nombre, int telefono) {
+		this.nombre = nombre;
+		this.telefono = telefono;
 	}
 
 	public String getNombre() {
@@ -49,12 +43,12 @@ public class Hospital {
 		this.listaEspecialidades = listaEspecialidades;
 	}
 
-	public ArrayList<Consultorio> getConsultorios() {
-		return consultorios;
+	public ArrayList<Consultorio> getListaConsultorios() {
+		return listaConsultorios;
 	}
 
-	public void setConsultorios(ArrayList<Consultorio> consultorios) {
-		this.consultorios = consultorios;
+	public void setListaConsultorios(ArrayList<Consultorio> listaConsultorios) {
+		this.listaConsultorios = listaConsultorios;
 	}
 
 	public ArrayList<Medico> getListaMedicos() {
@@ -65,12 +59,12 @@ public class Hospital {
 		this.listaMedicos = listaMedicos;
 	}
 
-	public ArrayList<Cita> getCitas() {
-		return citas;
+	public ArrayList<Cita> getListaCitas() {
+		return listaCitas;
 	}
 
-	public void setCitas(ArrayList<Cita> citas) {
-		this.citas = citas;
+	public void setListaCitas(ArrayList<Cita> listaCitas) {
+		this.listaCitas = listaCitas;
 	}
 
 	public ArrayList<Paciente> getListaPacientes() {
@@ -81,11 +75,11 @@ public class Hospital {
 		this.listaPacientes = listaPacientes;
 	}
 
-	public Agenda getAgenda() {
+	public ArrayList<Agenda> getAgenda() {
 		return agenda;
 	}
 
-	public void setAgenda(Agenda agenda) {
+	public void setAgenda(ArrayList<Agenda> agenda) {
 		this.agenda = agenda;
 	}
 }

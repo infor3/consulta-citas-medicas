@@ -7,6 +7,7 @@ public class Cita {
 	private Date hora;
 	private boolean estado;
 	private int id;
+	private Consultorio consultorio;
 	private Paciente paciente;
 	
 	public Cita(Date fecha, Date hora, boolean estado, int id, Paciente paciente){
