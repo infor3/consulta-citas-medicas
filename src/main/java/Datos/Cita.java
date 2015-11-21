@@ -9,13 +9,16 @@ public class Cita {
 	private int id;
 	private Consultorio consultorio;
 	private Paciente paciente;
-	
-	public Cita(Date fecha, Date hora, boolean estado, int id, Paciente paciente){
-		this.fecha=fecha;
-		this.hora=hora;
-		this.estado=estado;
-		this.id=id;
-		this.paciente=paciente;
+	private Medico medico;
+
+	public Cita(Date fecha, Date hora, boolean estado, int id, Consultorio consultorio, Paciente paciente, Medico medico) {
+		this.fecha = fecha;
+		this.hora = hora;
+		this.estado = estado;
+		this.id = id;
+		this.consultorio = consultorio;
+		this.paciente = paciente;
+		this.medico = medico;
 	}
 
 	public Date getFecha() {
@@ -50,6 +53,14 @@ public class Cita {
 		this.id = id;
 	}
 
+	public Consultorio getConsultorio() {
+		return consultorio;
+	}
+
+	public void setConsultorio(Consultorio consultorio) {
+		this.consultorio = consultorio;
+	}
+
 	public Paciente getPaciente() {
 		return paciente;
 	}
@@ -58,4 +69,11 @@ public class Cita {
 		this.paciente = paciente;
 	}
 
+	public Medico getMedico() {
+		return medico;
+	}
+
+	public void setMedico(Medico medico) {
+		this.medico = medico;
+	}
 }
