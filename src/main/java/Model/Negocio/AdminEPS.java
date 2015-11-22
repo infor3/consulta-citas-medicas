@@ -1,6 +1,6 @@
-package Negocio;
+package Model.Negocio;
 
-import Datos.EPS;
+import Model.Datos.EPS;
 
 import java.util.ArrayList;
 

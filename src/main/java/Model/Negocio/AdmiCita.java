@@ -1,6 +1,6 @@
-package Negocio;
+package Model.Negocio;
 
-import Datos.*;
+import Model.Datos.*;
 
 import java.util.Date;
 

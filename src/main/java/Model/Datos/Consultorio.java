@@ -1,4 +1,4 @@
-package Datos;
+package Model.Datos;
 
 public class Consultorio {
 	private boolean estado;

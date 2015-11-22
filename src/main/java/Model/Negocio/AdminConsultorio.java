@@ -1,9 +1,8 @@
-package Negocio;
+package Model.Negocio;
 
-import Datos.*;
+import Model.Datos.*;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashSet;
 
 public class AdminConsultorio {

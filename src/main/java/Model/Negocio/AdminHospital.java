@@ -1,11 +1,11 @@
-package Negocio;
+package Model.Negocio;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 
-import Datos.EPS;
-import Datos.Hospital;
-import Datos.Medico;
+import Model.Datos.EPS;
+import Model.Datos.Hospital;
+import Model.Datos.Medico;
 
 
 public class AdminHospital {

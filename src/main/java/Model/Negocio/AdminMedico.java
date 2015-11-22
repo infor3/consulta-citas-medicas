@@ -1,7 +1,7 @@
-package Negocio;
+package Model.Negocio;
 
-import Datos.Hospital;
-import Datos.Medico;
+import Model.Datos.Hospital;
+import Model.Datos.Medico;
 
 import java.util.ArrayList;
 

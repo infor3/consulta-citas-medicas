@@ -1,29 +1,15 @@
-package Negocio;
+package Model.Negocio;
 
-import Datos.*;
+import Model.Datos.EPS;
+import Model.Datos.Paciente;
 
-import java.util.ArrayList;
+/**
+ * Created by Jorge.
+ */
+public class AdminPaciente {
 
-
-public class AdmiAgenda {
-
-    public void listadoCitas(Hospital hospital){
-        ArrayList<Cita> totalCitas=new ArrayList<>();
-        ArrayList<Medico> listaMedicos;
-        listaMedicos = new ArrayList<>();
-        for (Medico listaMedico : listaMedicos) {
-            for (int j = 0; j < listaMedico.getAgenda().size(); j++) {
-                for (int k = 0; k < listaMedico.getAgenda().get(j).getListaCitas().size(); k++) {
-                    if (listaMedico.getAgenda().get(j).getListaCitas().get(k).isEstado()) {
-                        totalCitas.add(listaMedico.getAgenda().get(j).getListaCitas().get(k));
-                    }
-                }
-            }
-        }
-        hospital.setAgenda(totalCitas);
-    }
     public void crear(String nombre, String apellido, String correo, String direccion, String id, String contrasenia, int nivel, int edad, int telefono, int celular, boolean afiliado, EPS eps){
-        new Paciente(nombre, apellido, correo, direccion, id, contrasenia, nivel, edad, telefono, celular, afiliado, eps);
+       eps.getListaPaciente().add(new Paciente(nombre, apellido, correo, direccion, id, contrasenia, nivel, edad, telefono, celular, afiliado, eps));
     }
 
     public void actualizar(Paciente paciente, EPS eps){
@@ -54,5 +40,4 @@ public class AdmiAgenda {
         }
         return null;
     }
-
 }
