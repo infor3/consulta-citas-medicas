@@ -6,6 +6,8 @@ public class EPS {
 	private String nombre;
 	private ArrayList<Hospital> listaHospitales=new ArrayList<>();
 
+    private ArrayList<Paciente> listaPaciente = new ArrayList<>();
+
 	public EPS() {
 	}
 
@@ -29,4 +31,12 @@ public class EPS {
 	public void setListaHospitales(ArrayList<Hospital> listaHospitales) {
 		this.listaHospitales = listaHospitales;
 	}
+
+    public ArrayList<Paciente> getListaPaciente() {
+        return listaPaciente;
+    }
+
+    public void setListaPaciente(ArrayList<Paciente> listaPaciente) {
+        this.listaPaciente = listaPaciente;
+    }
 }
