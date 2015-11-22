@@ -2,9 +2,9 @@ package prueba;
 
 import java.util.ArrayList;
 
-import Datos.Hospital;
-import Datos.Medico;
-import Negocio.AdminHospital;
+import Model.Datos.Hospital;
+import Model.Datos.Medico;
+import Model.Negocio.AdminHospital;
 
 public class Main {
 
