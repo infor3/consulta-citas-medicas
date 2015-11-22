@@ -2,7 +2,6 @@ package Negocio;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-
 import Datos.Hospital;
 import Datos.Medico;
 

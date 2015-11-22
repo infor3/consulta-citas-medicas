@@ -1,11 +1,9 @@
 package Negocio;
 
-import Datos.Agenda;
-import Datos.Cita;
-import Datos.Consultorio;
-import Datos.Hospital;
+import Datos.*;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class AdimConsultorio {
     public void ConsultorioAdd(int id, int telefono, Hospital hospital) {
@@ -14,11 +12,23 @@ public class AdimConsultorio {
     }
 
     public void ConsultorioRemove(Consultorio consultorio) {
-        ArrayList<Agenda> ag=consultorio.getHospital().getAgenda();
+        ArrayList<Cita> ag=consultorio.getHospital().getAgenda();
+        ArrayList<Medico> med=new ArrayList<>();
+        ArrayList<Paciente> pad=new ArrayList<>();
         for (int j = 0; j < ag.size(); j++) {
-            for (int k = 0; k < ag.get(k).getListaCitas().size(); k++) {
-               // if (ag.get(j).getListaCitas().get(k)){}
+            if (ag.get(j).getConsultorio().equals(consultorio)){
+                med.add(ag.get(j).getMedico());
+                pad.add(ag.get(j).getPaciente());
+                ag.remove(j);
             }
         }
+        HashSet<Medico> hashSet=new HashSet<>(med);
+        med.clear();
+        med.addAll(hashSet);
+        HashSet<Paciente> hashSet2=new HashSet<>(pad);
+        pad.clear();
+        pad.addAll(hashSet2);
+
+        
     }
 }

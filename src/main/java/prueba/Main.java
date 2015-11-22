@@ -25,18 +25,18 @@ public class Main {
 		
 		Medico me=new Medico();
 		Medico me1=new Medico();
-		me.setEspecialidades(prueba);
-		me1.setEspecialidades(prueba2);
+		me.setListaEspecialidades(prueba);
+		me1.setListaEspecialidades(prueba2);
 		hos.getListaMedicos().add(me);
 		hos.getListaMedicos().add(me1);
 		prueba3.add("item 14");
 		prueba3.add("item 15");
 		Medico me2=new Medico();
-		me2.setEspecialidades(prueba3);
+		me2.setListaEspecialidades(prueba3);
 		hos.getListaMedicos().add(me2);
 		ad.modificarEspeRemove(hos, me2);
 
-		prueba2=hos.getListaEspecialidades();
+
 		for (int i = 0; i < prueba2.size(); i++) {
 			System.out.println(prueba2.get(i));
 		}

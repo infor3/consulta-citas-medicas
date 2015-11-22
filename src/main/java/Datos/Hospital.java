@@ -82,4 +82,6 @@ public class Hospital {
     public void setAgenda(ArrayList<Cita> agenda) {
         this.agenda = agenda;
     }
+
+
 }
