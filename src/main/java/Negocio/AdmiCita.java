@@ -1,8 +1,8 @@
 package Negocio;
 
-import Datos.Cita;
-import Datos.Hospital;
-import Datos.Medico;
+import Datos.*;
+
+import java.util.Date;
 
 /**
  * Created by Andrew on 13/11/2015.
@@ -25,9 +25,39 @@ public class AdmiCita {
             }
         }
     }
-    public void citaRemove(Cita cita,Hospital hospital,Medico medico){
-        //for (int i = 0; i < ; i++) {
-        //}
+    public void crear(Date fecha, Date hora, boolean estado, String id, Consultorio consultorio, Paciente paciente, Medico medico){
+        Cita cita=new Cita(fecha, hora, estado, id, consultorio, paciente, medico);
+        paciente.getListaCitas().add(cita);
+
+    }
+
+    public void actualizar(Cita cita, Paciente paciente){
+        for (int i = 0; i < paciente.getListaCitas().size(); i++) {
+            if(cita.getId().equals(paciente.getListaCitas().get(i).getId())){
+                paciente.getListaCitas().add(i,cita);
+                break;
+            }
+        }
+    }
+
+    public void eliminar(String id, Paciente paciente){
+        Cita temp = buscar(id, paciente);
+        if(!temp.getId().equals(null)){
+            for (int i = 0; i < paciente.getListaCitas().size(); i++) {
+                if(temp.getId().equals(id)){
+                    paciente.getListaCitas().remove(i);
+                }
+            }
+        }
+    }
+
+    public Cita buscar(String id, Paciente paciente){
+        for(Cita cita: paciente.getListaCitas()){
+            if(cita.getId().equals(id)){
+                return cita;
+            }
+        }
+        return null;
     }
 
 }

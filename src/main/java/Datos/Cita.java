@@ -6,12 +6,12 @@ public class Cita {
 	private Date fecha;
 	private Date hora;
 	private boolean estado;
-	private int id;
+	private String id;
 	private Consultorio consultorio;
 	private Paciente paciente;
 	private Medico medico;
 
-	public Cita(Date fecha, Date hora, boolean estado, int id, Consultorio consultorio, Paciente paciente, Medico medico) {
+	public Cita(Date fecha, Date hora, boolean estado, String id, Consultorio consultorio, Paciente paciente, Medico medico) {
 		this.fecha = fecha;
 		this.hora = hora;
 		this.estado = estado;
@@ -45,11 +45,11 @@ public class Cita {
 		this.estado = estado;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

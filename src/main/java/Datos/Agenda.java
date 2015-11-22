@@ -6,17 +6,11 @@ import java.util.Date;
 public class Agenda {
 	private Date inicioAgenda;
 	private Date finAgenda;
-	private Date fecha;
-	private Date inicio;
-	private Date fin;
 	private ArrayList<Cita> listaCitas=new ArrayList<>();
 
-	public Agenda(Date inicioAgenda, Date finAgenda, Date fecha, Date inicio, Date fin) {
+	public Agenda(Date inicioAgenda, Date finAgenda) {
 		this.inicioAgenda = inicioAgenda;
 		this.finAgenda = finAgenda;
-		this.fecha = fecha;
-		this.inicio = inicio;
-		this.fin = fin;
 	}
 
 	public Date getInicioAgenda() {
@@ -33,30 +27,6 @@ public class Agenda {
 
 	public void setFinAgenda(Date finAgenda) {
 		this.finAgenda = finAgenda;
-	}
-
-	public Date getFecha() {
-		return fecha;
-	}
-
-	public void setFecha(Date fecha) {
-		this.fecha = fecha;
-	}
-
-	public Date getInicio() {
-		return inicio;
-	}
-
-	public void setInicio(Date inicio) {
-		this.inicio = inicio;
-	}
-
-	public Date getFin() {
-		return fin;
-	}
-
-	public void setFin(Date fin) {
-		this.fin = fin;
 	}
 
 	public ArrayList<Cita> getListaCitas() {

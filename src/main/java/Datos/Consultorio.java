@@ -2,12 +2,12 @@ package Datos;
 
 public class Consultorio {
 	private boolean estado;
-	private int id;
+	private String id;
 	private int telefono;
 	private Hospital hospital;
 	private Medico medico;
 	
-	public Consultorio(boolean estado, int id, int telefono, Hospital hospital, Medico medico){
+	public Consultorio(boolean estado, String id, int telefono, Hospital hospital, Medico medico){
 		this.estado=estado;
 		this.id=id;
 		this.telefono=telefono;
@@ -23,11 +23,11 @@ public class Consultorio {
 		this.estado = estado;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
