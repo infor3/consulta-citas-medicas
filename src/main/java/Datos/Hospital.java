@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Hospital {
 	private String nombre;
 	private int telefono;
+    private EPS eps;
 	private ArrayList<String> listaEspecialidades=new ArrayList<>();
 	private ArrayList<Consultorio> listaConsultorios =new ArrayList<>();
 	private ArrayList<Medico> listaMedicos=new ArrayList<>();
@@ -13,12 +14,21 @@ public class Hospital {
 
 	public Hospital(){}
 
-	public Hospital(String nombre, int telefono) {
+	public Hospital(String nombre, int telefono, EPS eps) {
 		this.nombre = nombre;
 		this.telefono = telefono;
+        this.eps = eps;
 	}
 
-	public String getNombre() {
+    public EPS getEps() {
+        return eps;
+    }
+
+    public void setEps(EPS eps) {
+        this.eps = eps;
+    }
+
+    public String getNombre() {
 		return nombre;
 	}
 

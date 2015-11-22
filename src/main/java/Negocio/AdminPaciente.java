@@ -6,12 +6,12 @@ import Datos.Paciente;
 import java.util.ArrayList;
 
 /**
- * Created by Jorge on 21/11/2015.
+ * Created by Jorge.
  */
 public class AdminPaciente {
 
     public void crear(String nombre, String apellido, String correo, String direccion, String id, String contrasenia, int nivel, int edad, int telefono, int celular, boolean afiliado, EPS eps){
-       new Paciente(nombre, apellido, correo, direccion, id, contrasenia, nivel, edad, telefono, celular, afiliado, eps);
+       eps.getListaPaciente().add(new Paciente(nombre, apellido, correo, direccion, id, contrasenia, nivel, edad, telefono, celular, afiliado, eps));
     }
 
     public void actualizar(Paciente paciente, EPS eps){
