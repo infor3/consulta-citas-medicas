@@ -25,7 +25,7 @@ public class Persona {
 		this.celular = celular;
 	}
 
-	public Persona() {}
+	public Persona(String nombre, String apellido, String correo, String direccion, int telefono, int celular) {}
 
 	public String getNombre() {
 		return nombre;

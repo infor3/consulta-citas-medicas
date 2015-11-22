@@ -13,6 +13,15 @@ public class Paciente extends Persona{
 		this.hospital = hospital;
 	}
 
+	public Paciente(){
+
+	}
+
+	public void agregarpaciente(){
+
+
+	}
+
 	public boolean isAfiliado() {
 		return afiliado;
 	}
