@@ -6,7 +6,7 @@ import Datos.Hospital;
 import Datos.Medico;
 
 
-public class AdmiHospital {
+public class AdminHospital {
 
 	public void modificarEspeRemove(Hospital hospital, Medico medico) {
 		ArrayList<Medico> medic=hospital.getListaMedicos();

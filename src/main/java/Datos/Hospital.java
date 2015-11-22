@@ -9,7 +9,6 @@ public class Hospital {
 	private ArrayList<Consultorio> listaConsultorios =new ArrayList<>();
 	private ArrayList<Medico> listaMedicos=new ArrayList<>();
 	private ArrayList<Cita> listaCitas= new ArrayList<>();
-	private ArrayList<Paciente> listaPacientes= new ArrayList<>();
 	private ArrayList<Cita> agenda= new ArrayList<>();
 
 	public Hospital(){}
@@ -67,15 +66,7 @@ public class Hospital {
 		this.listaCitas = listaCitas;
 	}
 
-	public ArrayList<Paciente> getListaPacientes() {
-		return listaPacientes;
-	}
-
-	public void setListaPacientes(ArrayList<Paciente> listaPacientes) {
-		this.listaPacientes = listaPacientes;
-	}
-
-    public ArrayList<Cita> getAgenda() {
+	public ArrayList<Cita> getAgenda() {
         return agenda;
     }
 

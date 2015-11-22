@@ -5,7 +5,7 @@ import Datos.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class AdimConsultorio {
+public class AdminConsultorio {
     public void ConsultorioAdd(int id, int telefono, Hospital hospital) {
         Consultorio consultorio = new Consultorio(true, id, telefono, hospital, null);
         hospital.getListaConsultorios().add(consultorio);
