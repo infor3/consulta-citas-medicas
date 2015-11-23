@@ -1,8 +1,5 @@
 package Model.Datos;
-
-
-
-		import java.util.ArrayList;
+import java.util.ArrayList;
 
 public class Persona {
 	private String nombre;
