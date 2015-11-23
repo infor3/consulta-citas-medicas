@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,6 +6,11 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:500,700,300" rel="stylesheet" type="text/css">
     <link type="text/css" rel="stylesheet" href="Home.css" />    
     <title>Formato usuarios</title>
+    <script>
+function index() {
+	location.href='home.html';
+}
+</script>
 </head>
 <body>
     <div id="main">
@@ -61,7 +66,7 @@
                                 Correo electrónico:
                             </td>
                             <td>
-                                <input type="email" name="correo">
+                                <input type="text" name="correo">
                             </td>
                         </tr>
                         <tr>
@@ -110,7 +115,9 @@
                         <tr>
                             <td>
                                 <input type="submit" name="submit" value="Enviar">
-                            </td>
+                            </td><td>
+                                <input type="button" name="exit" value="Cancelar" onclick="index()">
+                        </td>
                         </tr>
                     </table>
                 </form>
