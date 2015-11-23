@@ -6,6 +6,11 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:500,700,300" rel="stylesheet" type="text/css">
     <link type="text/css" rel="stylesheet" href="Home.css" />    
     <title>Formato usuarios</title>
+    <script>
+function index() {
+	location.href='CrearEPS.jsp';
+}
+</script>
 </head>
 <body>
     <div id="main">
@@ -109,7 +114,9 @@
                         <tr>
                             <td>
                                 <input type="submit" name="submit" value="Enviar">
-                            </td>
+                            </td><td>
+                                <input type="button" name="exit" value="Cancelar" onclick="index()">
+                        </td>
                         </tr>
                     </table>
                 </form>
