@@ -7,7 +7,7 @@
 <title>Crear EPS</title>
 <script>
 function index() {
-	location.href='CrearEPS.jsp';
+	location.href='home.html';
 }
 </script>
 </head>
