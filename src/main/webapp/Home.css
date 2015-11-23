@@ -15,7 +15,7 @@ body {
     width:800px;
     height: 800px;
     margin:auto;
-    margin-bottom: 400px;
+    margin-bottom: 100px;
     margin-top: 20px;
 }
 
@@ -70,20 +70,29 @@ li, ul{
     background-color: #66ff66;
 }
 
-#content{
+#contentbg{
+    width:inherit;
+    height: 500px;
     background-color: black;
-    opacity: 0.5;
+    opacity:0.4;    
+}
+
+#content{
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 #content> form {   
-    background-color:whitesmoke;
     width: 500px;
     margin:auto;
     padding-top: 50px;
     padding-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 #content > form > table{
-    stop-opacity: 1.0;
     margin:auto;
+}
+
+footer {
+    background-color: rgba(0,0,0,0.3);
 }
