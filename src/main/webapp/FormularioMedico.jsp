@@ -25,10 +25,10 @@ function index() {
             Fecha de nacimiento:</td><td><input type="date" name="fecha_nacimiento">
         </td></tr>
         <tr><td>
-            Correo electrónico:</td><td><input type="email" name="correo">
+            Correo electrï¿½nico:</td><td><input type="email" name="correo">
         </td></tr>
         <tr><td>
-            Dirección:</td><td><input type="text" name="direccion">
+            Direcciï¿½n:</td><td><input type="text" name="direccion">
         </td></tr>
         <tr><td>
             Telefono:</td><td><input type="text" name="telefono">
