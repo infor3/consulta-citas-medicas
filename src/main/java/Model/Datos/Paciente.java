@@ -3,27 +3,34 @@ package Model.Datos;
 import java.util.ArrayList;
 
 public class Paciente extends Persona{
-	private EPS eps;
-	private ArrayList <Cita> listaCitas=new ArrayList<>();
+	private int id;
+	private boolean afiliado;
+	private Hospital hospital;
+	private ArrayList <Cita> citas=new ArrayList<Cita>();
+	public Paciente(String nombre, String apellido, String correo, String direccion, int telefono, int id, int celular, boolean afiliado, ArrayList citas){
+		super(nombre,apellido,correo,direccion,telefono,celular);
+		this.id=id;
+		this.afiliado=afiliado;
+		this.citas=citas;
 
-	public Paciente(String nombre, String apellido, String correo, String direccion, String id, String contrasenia, int nivel, int edad, int telefono, int celular, boolean afiliado, EPS eps) {
-		super(nombre, apellido, correo, direccion, id, contrasenia, nivel, edad, telefono, celular);
-		this.eps = eps;
 	}
-
-	public ArrayList<Cita> getListaCitas() {
-		return listaCitas;
+	public int getId() {
+		return id;
 	}
-
-	public void setListaCitas(ArrayList<Cita> listaCitas) {
-		this.listaCitas = listaCitas;
+	public void setId(int id) {
+		this.id = id;
 	}
-
-	public EPS getEps() {
-		return eps;
+	public boolean isAfiliado() {
+		return afiliado;
 	}
-
-	public void setEps(EPS eps) {
-		this.eps = eps;
+	public void setAfiliado(boolean afiliado) {
+		this.afiliado = afiliado;
+	}
+	public Hospital getHospital() {
+		return hospital;
+	}
+	public void setHospital(Hospital hospital) {
+		this.hospital = hospital;
 	}
 }
+

@@ -1,13 +1,15 @@
 package Model.Datos;
 
+
+
 public class Consultorio {
 	private boolean estado;
-	private String id;
+	private int id;
 	private int telefono;
 	private Hospital hospital;
 	private Medico medico;
-	
-	public Consultorio(boolean estado, String id, int telefono, Hospital hospital, Medico medico){
+
+	public Consultorio(boolean estado, int id, int telefono, Hospital hospital, Medico medico){
 		this.estado=estado;
 		this.id=id;
 		this.telefono=telefono;
@@ -15,7 +17,7 @@ public class Consultorio {
 		this.medico=medico;
 	}
 
-	public boolean isEstado() {
+	public boolean getEstado() {
 		return estado;
 	}
 
@@ -23,11 +25,11 @@ public class Consultorio {
 		this.estado = estado;
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -54,8 +56,9 @@ public class Consultorio {
 	public void setMedico(Medico medico) {
 		this.medico = medico;
 	}
-	
-	
-	
+
+
+
 
 }
+
