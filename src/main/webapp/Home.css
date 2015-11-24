@@ -1,0 +1,98 @@
+﻿* {
+    margin:0px;
+    padding:0px;
+}
+body {
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #09F;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#main {
+    width:800px;
+    height: 800px;
+    margin:auto;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+#header {
+    width:auto;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+#menu {
+    background-color: #66b2ff;
+    width: 800px;
+    position:relative;
+    height:30px;
+}
+
+#menu li a{
+    text-decoration: none;
+    color:#fff;
+}
+
+nav{
+    width: 800px; 
+}
+
+nav ul li a{
+    padding:10px 12px 10px 12px;
+}
+
+nav > ul > li{
+    float:left;
+}
+
+nav ul li ul{
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+nav ul li ul li{
+    background-color:#09F;
+}
+nav ul li:hover > ul{
+    display:block;
+}
+
+li, ul{
+    list-style:none;
+}
+
+#menu nav ul li:hover{
+    background-color: #66ff66;
+}
+
+#contentbg{
+    width:inherit;
+    height: 500px;
+    background-color: black;
+    opacity:0.4;    
+}
+
+#content{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#content> form {   
+    width: 500px;
+    margin:auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#content > form > table{
+    margin:auto;
+}
+
+footer {
+    background-color: rgba(0,0,0,0.3);
+}

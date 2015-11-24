@@ -1,19 +1,18 @@
 package Model.Datos;
 
-import java.util.ArrayList;
+
+
+		import java.util.ArrayList;
+		import java.util.Scanner;
 
 public class EPS {
 	private String nombre;
-	private ArrayList<Hospital> listaHospitales=new ArrayList<>();
+	private ArrayList<Hospital> hospitales=new ArrayList<Hospital>();
 
-    private ArrayList<Paciente> listaPaciente = new ArrayList<>();
 
-	public EPS() {
-	}
-
-	public EPS(String nombre, ArrayList<Hospital> listaHospitales) {
-		this.nombre = nombre;
-		this.listaHospitales = listaHospitales;
+	public EPS(String nombre, ArrayList hospitales){
+		this.nombre=nombre;
+		this.hospitales=hospitales;
 	}
 
 	public String getNombre() {
@@ -24,19 +23,49 @@ public class EPS {
 		this.nombre = nombre;
 	}
 
-	public ArrayList<Hospital> getListaHospitales() {
-		return listaHospitales;
+	public void crearHospital(Agenda agenda){
+		Scanner xx=new Scanner(System.in);
+		System.out.println("Ingrese el nombre del hospital");
+		String nombre=xx.nextLine();
+		System.out.println("Ingrese numero de telefono");
+		int telefono=xx.nextInt();
+		ArrayList<Consultorio> consultorios=new ArrayList<Consultorio>();
+		ArrayList<Medico> medicos= new ArrayList<Medico>();
+		ArrayList<Cita> citas= new ArrayList<Cita>();
+		ArrayList<Paciente> pacientes= new ArrayList<Paciente>();
+		Hospital hospital = new Hospital(nombre, telefono, consultorios, medicos, citas, pacientes, agenda);
+		hospitales.add(hospital);
 	}
 
-	public void setListaHospitales(ArrayList<Hospital> listaHospitales) {
-		this.listaHospitales = listaHospitales;
+	public Hospital buscarHospital(String nombre){
+		ArrayList<Hospital> l= hospitales;
+		for(Hospital s : l){
+			if(s.getNombre().equalsIgnoreCase(nombre))
+				return s;
+		}
+		return null;
 	}
 
-    public ArrayList<Paciente> getListaPaciente() {
-        return listaPaciente;
-    }
+	public void listarHospital(){
+		ArrayList<Hospital> l=hospitales;
+		for(Hospital s:l)
+			System.out.println(s);
+	}
 
-    public void setListaPaciente(ArrayList<Paciente> listaPaciente) {
-        this.listaPaciente = listaPaciente;
-    }
+	public void modificarHospital(String nombre){
+		Scanner xx=new Scanner(System.in);
+		Hospital hospital=buscarHospital(nombre);
+		System.out.println("Ingrese nuevo nombre");
+		hospital.setNombre(xx.nextLine());
+		System.out.println("Ingrese nuevo numero");
+		hospital.setTelefono(xx.nextInt());
+	}
+
+	public void eliminarHospital(String nombre){
+		Hospital hospital=buscarHospital(nombre);
+		hospitales.remove(hospital);
+	}
+
 }
+
+
